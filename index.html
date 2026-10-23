@@ -117,9 +117,10 @@
             <h1 class="rv">Hi, I'm <em>Nyxi</em>.</h1>
             <p class="rv">Also known as <b>Nyxi Kitty</b>. I build things that talk over the wire, take apart things that weren't meant to be opened, and keep servers and databases standing when people pile onto them. What I'm best at is networking, especially <b>multiplayer networking</b>.</p>
             <p class="rv">I also make music. Beats and tracks go on SoundCloud, videos on YouTube and code on GitHub. When I'm away from the computer, I'm out urban exploring: abandoned buildings, rooftops, tunnels and the forgotten corners of the city.</p>
+            <p class="rv">Lately I've been taking Unity WebGL games apart from the inside. <b>Odium UE</b> explores a running IL2CPP game in the browser, and <b>BananaLoader</b> turns that into a full mod loader with JavaScript mods.</p>
             <p class="rv">Right now I'm building <b>FloofVR</b>, a multiplayer social VR game in Godot 4 with a Bun and TypeScript server, by myself.</p>
             <div class="stats rv">
-              <div class="stat"><span>Projects</span><b>7</b></div>
+              <div class="stat"><span>Projects</span><b>9</b></div>
               <div class="stat"><span>Languages</span><b>10</b></div>
               <div class="stat"><span>Top songs</span><b>4</b></div>
             </div>
@@ -166,6 +167,48 @@
               <div class="tags"><span>JavaScript</span><span>FishNet</span><span>WebSockets</span><span>Reverse engineering</span></div>
             </div>
             <div class="viewer" data-shots='[["meowengine-ingame","Running in a live match"],["meowengine-dashboard","Dashboard"],["meowengine-packets","Packet inspector"],["meowengine-rpc","RPC explorer"],["meowengine-players","Players"]]'></div>
+          </div>
+        </article>
+
+        <article class="proj rv" id="p-bananaloader">
+          <div class="win-head">
+            <img src="assets/icons/bananaloader.png" alt="" width="28" height="28">
+            <div class="win-title"><h3>BananaLoader</h3><span>MelonLoader for Unity WebGL · JavaScript</span></div>
+            <a class="btn" href="https://github.com/oddnyxi/bananaloader-webgl" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
+          </div>
+          <div class="proj-body">
+            <div class="proj-text">
+              <p>A MelonLoader-style mod loader for Unity WebGL games compiled with IL2CPP. Mods are JavaScript files called <b>Banans</b>. They get MelonLoader's lifecycle, Harmony-style patches and game objects that act like C#, all inside the browser tab.</p>
+              <ul class="ticks">
+                <li>Prefix and postfix patches on any method, including direct calls: the game's wasm is rewritten at load time</li>
+                <li>Generic types and methods: <code>List&lt;int&gt;</code>, <code>GetComponent&lt;T&gt;()</code>, patched per instantiation</li>
+                <li>Dependencies with version ranges, hot reload, preferences and coroutines</li>
+                <li>Exports a <code>.d.ts</code> of the whole game for typed autocomplete in VS Code</li>
+              </ul>
+              <div class="tags"><span>JavaScript</span><span>WebAssembly</span><span>IL2CPP</span><span>Modding</span></div>
+            </div>
+            <div class="viewer" data-shots='[["bananaloader-banans","Banans"],["bananaloader-editor","Editor with hot reload"],["bananaloader-patches","Patches"],["bananaloader-console","Console"]]'></div>
+          </div>
+        </article>
+
+        <article class="proj rv" id="p-odiumue">
+          <div class="win-head">
+            <img src="assets/icons/odiumue.png" alt="" width="28" height="28">
+            <div class="win-title"><h3>Odium UE</h3><span>Unity Explorer for WebGL IL2CPP games · userscript</span></div>
+            <a class="btn" href="https://github.com/oddnyxi/odium-ue" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
+          </div>
+          <div class="proj-body">
+            <div class="proj-text">
+              <p>A runtime explorer for Unity WebGL games. It reads the IL2CPP metadata straight from the game's memory and gives you the scene tree, an inspector and a class browser, with no build-specific offsets.</p>
+              <ul class="ticks">
+                <li>Scene hierarchy, live field and property editing, and method calls with <code>ref</code> and <code>out</code></li>
+                <li>Click an object in the game to select it, through UI hits and camera raycasts</li>
+                <li>Class browser over every assembly, with live instance search</li>
+                <li>Works from Unity 2021.2 to Unity 6 (metadata v29 and v31)</li>
+              </ul>
+              <div class="tags"><span>JavaScript</span><span>WebAssembly</span><span>IL2CPP</span><span>Reverse engineering</span></div>
+            </div>
+            <div class="viewer" data-shots='[["odiumue-picker","Picked from the game"],["odiumue-scene","Scene"],["odiumue-inspector","Inspector"],["odiumue-methods","Method calls"],["odiumue-classes","Class browser"]]'></div>
           </div>
         </article>
 

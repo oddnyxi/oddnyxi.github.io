@@ -1,0 +1,30 @@
+<p align="center"><img src="assets/img/mark.webp" width="72" alt=""></p>
+<h1 align="center">nyxi.github.io</h1>
+<p align="center">Personal site for Nyxi: projects, screenshots and music, in the Odium black-and-red theme.</p>
+
+![Preview](assets/preview.webp)
+
+## Deploy on GitHub Pages
+
+1. Push this folder to a repo. Name it `oddnyxi.github.io` to serve it at `https://oddnyxi.github.io`, or use any name to serve it at `https://oddnyxi.github.io/<repo>`.
+2. Go to **Settings → Pages**, set **Source** to *Deploy from a branch*, then pick `main` and `/ (root)`.
+
+It's plain static HTML with no build step. Every path is relative, so it also works from a subfolder.
+
+## Layout
+
+```
+index.html          page content (edit text, projects, tracks and links here)
+assets/site.css     Odium theme
+assets/site.js      screenshot viewer, lightbox, music player, beat-reactive glow
+assets/beats.js     loudness envelopes for each track (50 samples/s)
+assets/img/         banner, wordmark, mark, avatar, covers
+assets/shots/       project screenshots (.webp)
+assets/audio/       track previews (.m4a)
+```
+
+### Adding a screenshot
+Put a `.webp` in `assets/shots/`, then add `["file-name", "Caption"]` to that project's `data-shots` list in `index.html`.
+
+### Adding a track
+Copy an `<article class="trk">` block, then set `data-id`, the cover, the audio file and the SoundCloud URL. Beat-reactive visuals are optional: if `BEATS[id]` is missing, the track still plays without them.
